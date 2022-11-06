@@ -12,6 +12,7 @@ Project Pipelines:
 **4. Feature Engineering**<br>
   Guidelines: https://www.analyticsvidhya.com/blog/2021/03/step-by-step-process-of-feature-engineering-for-machine-learning-algorithms-in-data-science/<br>
 **5. Train Model**<br>
+
 **6. Test Model**<br>
 **7. Website Design**<br>
 **8. API Implementation**<br>
