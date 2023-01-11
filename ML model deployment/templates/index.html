@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Churn Prediction System</title>
+	<link href="https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}" >
+    <script src="https://kit.fontawesome.com/398de335e7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="Header">
+    <div>
+      <p class="headingtop"> <b>PredictChurn</b></p>
+    </div>
+    <div class="buttontop">
+      <a href="#predict" target="_blank"><b>Predict Churn</b></a>
+    </div>	
+	</div>
+  <div class="banner">
+    <img class="bannerpic" src ="{{ url_for('static',filename='homepage.jpg')}}" alt="My sample image" width="100%" >
+  </div> 
+  <div class="content-1">
+    <p class="content-1-header">Predict customer churn at every stage of the journey</p>
+    <p class="content-1-details">Our Machine Learning moodel  gathers customer data and predicts which customers are likely to churn at each stage of the journey.<br> We are helping you take the necessary action to retain them before it’s too late</p>
+  </div>
+  <div class="content-2">
+    <p class="content-2-header"><b>How our System Works</b></p>
+    <img class="bannerpic" src ="{{ url_for('static',filename='software_architecture.jpg')}}" alt="My sample image" width="100%" >
+  </div>
+  <div class="content-2">
+    <p class="content-2-header"><b>How our ML Model Works</b></p>
+    <img class="bannerpic" src ="{{ url_for('static',filename='mldiagram.jpg')}}" alt="My sample image" width="100%" >
+  </div>
+  <div class="content-2">
+    <img class="bannerpic" src ="{{ url_for('static',filename='accuracy.jpg')}}" alt="My sample image" width="100%" >
+  </div>
+  <div class="pred-title" id="predict">
+    <p class="pred-title-content">Customer Churn Prediction</p>
+  </div>
+
+<form action="{{ url_for('predict')}}"method="post">  
+  <div class="prediction_part">
+
+    <div>
+        <label for="lname">Tenure</label>
+        <input type="number" name="tenure" placeholder="Enter tenure" required="required">
+
+        <label for="fname">Warehouse to Home</label>
+        <input type="number" name="warehousetohome" placeholder="Enter distance from warehouse" required="required">
+    
+        <label for="lname">Hour Spend on App</label>
+        <input type="number" name="hourspendonapp" placeholder="Enter how much time  spend on the APP" required="required">
+
+        <label for="fname">Order Amount Hike</label>
+        <input type="number" name="orderamounthike" placeholder="Enter number of order amount hike from last year" required="required">
+    
+        <label for="lname">Number of Coupons</label>
+        <input type="number" name="couponused" placeholder="Enter the number of coupne used" required="required">
+
+        <label for="fname">Number of Orders</label>
+        <input type="number" name="ordercount" placeholder="Enter the number of order placed" required="required">
+    
+        <label for="lname">Day Since Last Order</label>
+        <input type="number"  name="daysincelastorder" placeholder="Enter the number of days passed since last order" required="required">
+
+        <label for="lname">Cash Back Amount</label>
+        <input type="number" name="cashbackamount" placeholder="Enter cash back amount" required="required">
+    </div>
+    <div>
+        <label for="lname">City Tier</label>
+        <select  name="citytier">
+          <option value="" diabled>Select City tier</option>
+          <option value="1">1 (Hihest Standard)</option>
+          <option value="2">2 (Medium Standard)</option>
+          <option value="3">3 (Low Standard)</option>
+        </select>
+
+        <label for="fname">Preferred Payment Method</label>
+        <select  name="preferredpaymentmode">
+          <option value="" diabled>Select Preferred payment Method</option>
+          <option value="Cash_On_Delivery">Cash on Delivery</option>
+          <option value="Credit_Card">Credit Card</option>
+          <option value="Debit_Card">Debit Card</option>
+          <option value="E_Wallet">E-wallet</option>
+          <option value="UPI">UPI</option>
+        </select>
+
+        <label for="fname">Gender</label>
+        <select  name="gender">
+          <option value="" diabled>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+    
+        <label for="lname">Preferred Order Category </label>
+        <select  name="preferredordercategory">
+          <option value="" diabled>Select Preferred Order Category </option>
+          <option value="Fashion">Fashion</option>
+          <option value="Grocery">Grocery</option>
+          <option value="Laptop&Accessory">Laptop & Mobile</option>
+          <option value="Mobile_Phone">Mobile Phone</option>
+          <option value="Others">Others</option>
+          
+        </select>
+
+        <label for="fname">Satisfaction Score</label>
+        <select  name="satisfactionscore">
+          <option value="" diabled>Select Satisfaction Score </option>
+          <option value="1">Excellent</option>
+          <option value="2">Very Good</option>
+          <option value="3">Good</option>
+          <option value="4">Bad</option>
+          <option value="5">Very Bad</option>
+          
+        </select>
+    
+        <label for="lname">Marital Status</label>
+        <select  name="maritalstatus">
+          <option value="" diabled>Select Marital Status </option>
+          <option value="Single">Single</option>
+          <option value="Married">Married</option>
+          <option value="Divorced">Divorced</option> 
+          
+        </select>
+
+        <label for="fname">Complain</label>
+        <select  name="complain">
+          <option value="" diabled>Select Complain Status </option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option> 
+        </select>
+
+        <input type="reset" value="Reset">
+    </div>
+
+
+
+
+  </div>
+    <div class="predict">
+       <input type="submit" value="Submit"><br>
+    </div>
+</form>
+
+</body>
+</html>
+

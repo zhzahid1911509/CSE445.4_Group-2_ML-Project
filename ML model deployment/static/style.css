@@ -1,0 +1,137 @@
+.Header{
+  width:100%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 85% 15%;
+  margin-bottom: 0px;
+  padding: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: #f64f46;
+ 
+}
+
+*{
+  padding:0;
+  margin:0;
+  text-decoration: none;
+  list-style:none;
+  box-sizing: border-box  ;
+}
+.headingtop{
+  font-family:'Montserrat', sans-serif;
+  text-align: left;
+ margin: 0auto;
+  font-size: 50px;
+  color: white;
+ 
+  font-family: 'Lato', sans-serif;
+
+}
+a:link, a:visited {
+  background-color: #ffdfdd;
+  color: rgb(173, 8, 8);
+  padding: 10%;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  align-items: right;
+  font-size: 20px;
+}
+
+a:hover, a:active {
+  background-color: rgb(255, 132, 132);
+}
+.content-1{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.content-1-header{
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0auto;
+  font-size: 30px;
+  color: rgb(23, 23, 23);
+  padding-bottom: 1%;
+  }
+.content-1-details{
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px;
+  color: rgb(32, 32, 32);
+  padding-right:  10%;
+  padding-left:  10%;
+}
+.content-2{
+  width: 80%;
+  margin: 0 auto;
+}
+.content-2-header{
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+  margin: 0auto;
+  font-size: 50px;
+  color: #f64f46;
+  padding-bottom: 1%;
+}
+.pred-title{
+  font-size: larger;
+  font-weight: 1200;
+ background-color: #f64f46;
+ padding: 2%;
+
+}
+.pred-title-content{
+  font-size: 50px;
+ 
+  color: #ffffff;
+  text-align: center;
+
+}
+.prediction_part{
+  width:70%;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 10%;
+  margin-bottom: 0px;
+  column-width: 240px;
+  column-gap: 2em;            
+  padding: 3%;
+  border-radius: 5px;
+  padding: 20px;
+}
+label{
+  color: #f64f46;
+  font-size: 15px;
+}
+input[type=text],[type=number], select {
+  width: 100%; 
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit],[type=reset] {
+  width: 100%;
+  background-color: #f64f46;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #710904;
+}
+.predict{
+  width: 30%;
+  margin: 0 auto;
+  text-align: center;
+}
+
